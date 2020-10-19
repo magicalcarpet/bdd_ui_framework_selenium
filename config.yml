@@ -1,6 +1,11 @@
 local:
     homepage_url: 'http://www.flora-local.com'
+    name: 'local_name'
 staging:
     homepage_url: 'http://www.flora-staging.com'
+    name: 'staging_name'
 prod:
     homepage_url: 'https://www.flora.com/en-gb/flora'
+    name: 'prod_name'
+
+
