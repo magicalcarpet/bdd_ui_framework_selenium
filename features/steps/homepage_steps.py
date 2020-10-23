@@ -1,10 +1,16 @@
 from behave import given, when, then
-from lib.helpers.env_config import  EnvConfig 
+from lib.helpers.env_config import  EnvConfig
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from features.environment import bin_path
 
 @given(u'a user is on the Flora Homepage')
 def user_on_homepage(context):
-    print(EnvConfig.environment_config_for('homepage_url'))
-    print('User is on homepage')
+    # launch your browser
+    driver = webdriver.Chrome(executable_path=bin_path())
+    driver.get(EnvConfig.environment_config_for('homepage_url'))
+    # go to the flora homepage
+    print('')
 
 
 @when(u'he clicks on Our Products button')
